@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("../images/background.png") no-repeat center center fixed;
+  background-size: cover;
+  transition: background-color 0.5s ease;
+
+}
+
+/*HEADER*/
+
+header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+header ul {
+  display: flex;
+  gap: 3rem;
+  justify-content: end;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+/*NAVEGADOR*/
+
+.nav-links {
+  display: flex;
+  justify-content: end;
+  top: 0;
+  left: 0;
+  align-items: center;
+}
+.button-section {
+  width: 7.5rem;
+  height: 2.2rem;
+  background-color: transparent;
+  border: #c24914;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 6px 0px #c24914;
+  color: #f7f2f2;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+}
+
+.button-section:hover {
+  cursor: pointer;
+  background-color: #f2f5f5;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+/*ENLACES*/
+a {
+  text-decoration: none; /*Así le quitamos el subrayado a los enlaces*/
+  color: #000; /*Así le quitamos el color azul a los enlaces*/
+}
+
+a:hover {
+  color: #c24914;
+}
+
+.menu-section:hover {
+  cursor: pointer;
+  color: #c24914;
+}
+
+/*LOGO*/
+
+.logo-web {
+  width: 13rem;
+  justify-content: start;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  transition: all 0.7s;
+}
+.logo-web:hover {
+  transform: scale(1.1);
+}
+
+.home-icon {
+  width: 2.5rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  transition: all 0.7s;
+}
+
+.home-icon:hover {
+  transform: scale(1.3);
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: flex;
+    border: 0;
+    font-size: 3rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .abrir-menu {
+    color: #c24914;
+    height: 80%;
+    width: 80%;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+  }
+
+  .cerrar-menu {
+    color: #c24914;
+    height: 80%;
+    width: 80%;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+  }
+
+  .nav-links {
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 0.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* bottom: 0%; */
+    padding: 0;
+    background: color #030303;
+    box-shadow: 0 0 0 100vmax #000 rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #f9e0ae;
+    padding: 1.5rem;
+    height: 245vh;
+    width: 100vw;
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .button-section {
+    width: 5rem;
+    height: 1.8rem;
+    font-size: 0.8rem;
+  }
+
+  .nav-list li a {
+    color: #c24914;
+  }
+
+  .button-section {
+    width: 5rem;
+    height: 1.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+.main-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 30%;
+  height: 6rem;
+  width: 16rem;
+  background-color: #c24914;
+  border: #c24914;
+  border-radius: 1rem;
+  box-shadow: 0 3px 6px 0px #c24914;
+  color: #f7f2f2;
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-button:hover {
+  cursor: pointer;
+  background-color: #686d6d;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 30%;
+  }
+}
+
+/* DARK MODE */
+.darkMode {
+  max-width: 600px;
+  margin: 11px auto;
+  padding: 0px;
+  /* background-color: rgba(0,0,0,.1); */
+  border-radius: 0.5rem;
+  border-color: #686d6d69;
+  color: #171716a8;
+  display: flex;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+/*CAROUSEL*/
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+
+.btn-register {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #c24914;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: #c24914;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 6px 0px #c24914;
+  color: #f7f2f2;
+}
+
+.btn-register:hover {
+  cursor: pointer;
+  background-color: #f4f7f7;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-next,
+.carousel-prev {
+  background-color: #c24914;
+  padding: 10px 15px;
+  height: 10%;
+  margin: 0.5%;
+  border: #c24914;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 6px 0px #c24914;
+  color: #f7f2f2;
+}
+
+.carousel-next:hover {
+  cursor: pointer;
+  background-color: #686d6d;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+.carousel-prev:hover {
+  cursor: pointer;
+  background-color: #686d6d;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+/*NEWSLETTER*/
+
+.newsletter-container {
+  max-width: 682px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #060606;
+}
+
+.form-box {
+  background-color: #f9e0ae;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+  flex-direction: row;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.5em; /* Tamaño de fuente ajustado */
+}
+
+#submitButton {
+  background-color: #c24914;
+  padding: 10px 15px;
+  height: 10%;
+  margin: 0% 0% 0% 2%;
+  border: #c24914;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 6px 0px #c24914;
+  color: #f7f2f2;
+  font-size: 1.1rem;
+}
+
+#submitButton:hover {
+  cursor: pointer;
+  background-color: #686d6d;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+input::placeholder {
+  font-style: normal;
+}
+
+#validationMessage {
+  color: red;
+}
+
+/*BOTON ME GUSTA*/
+
+.like-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+}
+
+#likeBtn {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  
+}
+
+#likeBtn:hover {
+  color: #2980b9; /* Cambia el color cuando el ratón está sobre el botón */
+}
+
+#likeCount {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+
+
+/*FOOTER*/
+
+footer {
+  background-color: #d9d9d9;
+  width: 100%;
+  display: flex;
+  /* grid-template-columns: 5fr 1fr 5fr; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-footer {
+  margin: 0.5rem;
+  display: grid;
+  justify-content: start;
+}
+
+.about-footer li {
+  display: grid;
+  justify-content: flex-start;
+}
+
+.about {
+  padding-left: 5%;
+}
+
+.rrss-footer {
+  display: flex;
+  align-items: center;
+  width: 19rem;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.logo-rrss {
+  width: 60%;
+  margin: 1rem;
+  gap: 0;
+  transition: all 0.3s;
+}
+
+.logo-rrss:hover {
+  transform: scale(1.3);
+}
+
+.info-footer {
+  margin: 1rem;
+
+  display: grid;
+  justify-content: flex-end;
+}
+
+.info-footer p,
+li {
+  display: grid;
+  justify-content: flex-end;
+}

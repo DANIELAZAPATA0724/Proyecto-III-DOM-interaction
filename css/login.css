@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("../images/background.png") no-repeat center center fixed;
+  background-size: cover;
+  align-items: center;
+  transition: background-color 0.5s ease;
+
+}
+
+/*HEADER*/
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  gap: 3rem;
+  justify-content: end;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+/*NAVEGADOR*/
+
+.nav-links {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 80%;
+  top: 0;
+  left: 0;
+  align-items: center;
+}
+.button-section {
+  width: 7.5rem;
+  height: 2.2rem;
+  background-color: transparent;
+  border: #c24914;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 6px 0px #c24914;
+  color: #f7f2f2;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+}
+
+.button-section:hover {
+  cursor: pointer;
+  background-color: #f2f5f5;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+/*ENLACES*/
+a {
+  text-decoration: none; /*Así le quitamos el subrayado a los enlaces*/
+  color: #000; /*Así le quitamos el color azul a los enlaces*/
+}
+
+a:hover {
+  color: #c24914;
+}
+
+.menu-section:hover {
+  cursor: pointer;
+  color: #c24914;
+}
+
+/*LOGO*/
+
+.logo-web {
+  width: 13rem;
+  justify-content: start;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  transition: all 0.7s;
+}
+.logo-web:hover {
+  transform: scale(1.1);
+}
+
+.home-icon {
+  width: 2.5rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  transition: all 0.7s;
+}
+
+.home-icon:hover {
+  transform: scale(1.3);
+}
+
+/* NO ELIMINAR: preguntar a los chicxs por que esto puede estar afectando el responsive del header */
+
+.discount {
+  max-width: 13rem;
+  height: 13rem;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* DARK MODE */
+.darkMode {
+  max-width: 600px;
+  margin: 11px auto;
+  padding: 0px;
+  /* background-color: rgba(0,0,0,.1); */
+  border-radius: 0.5rem;
+  border-color: #686d6d69;
+  color: #171716a8;
+  display: flex;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+/*FORMULARIO REGISTRO*/
+
+/* caja del formulario */
+.container {
+  display: flex;
+  padding: 14% 0 0% 0%;
+  justify-content: center;
+}
+
+.container-form {
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+  height: 31rem;
+  width: 60rem;
+}
+
+.container-form-register {
+  display: flex;
+}
+
+.information {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #f9e0ae;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.info-childs {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.info-childs h2 {
+  font-size: 2.5rem;
+  color: #000;
+}
+
+.info-childs p {
+  margin: 15px 0;
+  color: #000;
+}
+
+.info-childs input {
+  background-color: transparent;
+  outline: none;
+  border: solid 2px #c24914;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #c24914;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info-childs input:hover {
+  background-color: #c24914;
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+  background-color: #f8f8f8;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.form-information-childs {
+  padding: 0 30px;
+}
+
+.form-information-childs h2 {
+  color: #333;
+  font-size: 2rem;
+}
+
+.form-information-childs p {
+  color: #444;
+}
+
+.icons {
+  margin: 15px 0;
+}
+
+.icons i {
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #c24914;
+  border: solid thin #c24914;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.icons i:hover {
+  background-color: #c248145c;
+  color: #fff;
+}
+
+.form {
+  margin: 30px 0 0 0;
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  padding: 0 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form label input {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: #333;
+}
+
+.form label i {
+  color: #a7a7a7;
+}
+
+.form input[type="submit"] {
+  background-color: #c24914;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form input[type="submit"]:hover {
+  background-color: #615d5b;
+}
+
+.hide {
+  position: absolute;
+  transform: translateY(-300%);
+}
+
+/*RESPONSIVE FORM*/
+
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 10px;
+  }
+
+  .container-form {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .information {
+    width: 100%;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0;
+  }
+
+  .form-information {
+    width: 100%;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+  }
+}
+
+/*BOTON ME GUSTA*/
+
+.like-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+}
+
+#likeBtn {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  
+}
+
+#likeBtn:hover {
+  color: #2980b9; /* Cambia el color cuando el ratón está sobre el botón */
+}
+
+#likeCount {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: #d9d9d9;
+  width: 100%;
+  margin-top: 10%;
+  display: flex;
+  /* grid-template-columns: 5fr 1fr 5fr; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-footer {
+  margin: 0.5rem;
+  display: grid;
+  justify-content: start;
+}
+
+.about-footer li {
+  display: grid;
+  justify-content: flex-start;
+}
+
+.about {
+  padding-left: 5%;
+}
+
+.rrss-footer {
+  display: flex;
+  align-items: center;
+  width: 19rem;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.logo-rrss {
+  width: 60%;
+  margin: 1rem;
+  gap: 0;
+  transition: all 0.3s;
+}
+
+.logo-rrss:hover {
+  transform: scale(1.3);
+}
+
+.info-footer {
+  margin: 1rem;
+
+  display: grid;
+  justify-content: flex-end;
+}
+
+.info-footer p,
+li {
+  display: grid;
+  justify-content: flex-end;
+}
